@@ -4,6 +4,8 @@ La idea de este proyecto es dar un pequeño repaso sobre conexiones a una API y 
 
 Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101).
 
+
+
 ---
 
 ## 🚀 Cómo levantar el proyecto localmente
@@ -21,6 +23,9 @@ http://localhost:3000
 ## 🌳 Estrategia de ramificación
 >Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
 >Para organizar el trabajo se utilizaron ramas de corta duración asociadas a funcionalidades o correcciones específicas. Una vez terminados los cambios, estos se integraron a la rama principal mediante Pull Requests.
+
+Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
+
 
 ---
 
