@@ -26,7 +26,7 @@ http://localhost:3000
 
 ## 📝 Convenciones de commits
 
-> y por qué eligieron ese formato.
+Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
 
 ---
 
