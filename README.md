@@ -40,7 +40,6 @@ fix: Corrección de errores (ej. fix: corrige fallo al cargar la imagen inicial)
 
 docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README con instrucciones).
 
-Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
 ---
 
 ## 🔍 Estrategia de revisión (Pull Requests)
