@@ -13,17 +13,20 @@ No requiere instalación de dependencias. Basta con abrir `index.html` en el nav
 ```bash
 npx serve .
 ```
+Una vez iniciado el servidor, se debe acceder a la dirección indicada por la consola, normalmente:
 
+http://localhost:3000
 ---
 
 ## 🌳 Estrategia de ramificación
 >Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
+>Para organizar el trabajo se utilizaron ramas de corta duración asociadas a funcionalidades o correcciones específicas. Una vez terminados los cambios, estos se integraron a la rama principal mediante Pull Requests.
 
 ---
 
 ## 📝 Convenciones de commits
 
-> Documenten aquí el formato que van a usar para sus mensajes de commit (ej. `feat: agrega contador de likes`, `fix: corrige error en carga de imagen`), y por qué eligieron ese formato.
+> y por qué eligieron ese formato.
 
 ---
 
@@ -37,24 +40,82 @@ fix: Corrección de errores (ej. fix: corrige fallo al cargar la imagen inicial)
 
 docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README con instrucciones).
 
+Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
 ---
 
 ## 🔍 Estrategia de revisión (Pull Requests)
 
 > ✏️ **A completar por la pareja.**
-> ¿Cómo revisaron los cambios antes de fusionarlos a `develop` o `main`? ¿Qué debía cumplir un Pull Request para ser aprobado?
+Los cambios realizados por los integrantes fueron revisados mediante Pull Requests antes de ser incorporados a la rama main.
 
+Para aprobar un Pull Request se consideraron los siguientes puntos:
+
+El código debía cumplir con la funcionalidad solicitada.
+La aplicación debía ejecutarse correctamente.
+Los cambios debían ser coherentes con la estructura existente del proyecto.
+Los commits debían seguir las convenciones establecidas.
+El proceso utilizado fue:
+
+Crear rama
+    ↓
+Realizar cambios
+    ↓
+Commit
+    ↓
+Push de la rama
+    ↓
+Crear Pull Request
+    ↓
+Revisión del código
+    ↓
+Correcciones (si eran necesarias)
+    ↓
+Aprobación
+    ↓
+Merge a main
+
+La revisión mediante Pull Requests permitió detectar errores antes de integrar los cambios y mantener una versión estable del proyecto.
 ---
 
 ## ⚙️ Automatización (CI/CD)
 
-> Este proyecto no incluye ningún workflow de GitHub Actions todavía — es parte de su trabajo diseñarlo e implementarlo.
->
-> **Objetivo sugerido:** usar este repositorio como si tuviera un entorno de *staging* (rama `develop`) y uno de *producción* (rama `main`), automatizando la integración de cambios entre ambos. Por ejemplo:
-> - Al hacer `push` a `develop`: validar que el código no tenga errores evidentes (HTML/CSS/JS)
-> - Al abrir un Pull Request hacia `main`: ejecutar una verificación o despliegue automático
->
-> Documenten aquí qué automatizaron, por qué, y qué rol cumple dentro de un proceso CI/CD real.
+Para este proyecto se implementó una automatización básica mediante GitHub Actions, con el objetivo de validar automáticamente los cambios antes de integrarlos a la rama principal.
+
+El flujo de trabajo considera:
+
+Ejecutar validaciones cuando se realiza un push.
+Ejecutar validaciones al crear o actualizar un Pull Request hacia main.
+Verificar que los archivos principales del proyecto estén presentes.
+Realizar comprobaciones básicas sobre HTML, CSS y JavaScript.
+Evitar que cambios con errores evidentes sean integrados a la versión estable.
+
+La automatización permite detectar problemas de forma temprana y reduce la necesidad de realizar todas las verificaciones manualmente.
+
+Flujo CI/CD
+Desarrollador
+     ↓
+Commit
+     ↓
+Push
+     ↓
+GitHub
+     ↓
+GitHub Actions
+     ↓
+Validaciones automáticas
+     ↓
+   ¿Correcto?
+    ↙      ↘
+  Sí        No
+  ↓          ↓
+Pull       Corregir
+Request     errores
+  ↓
+Revisión
+  ↓
+Merge
+  ↓
+ main
 
 
 
