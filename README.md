@@ -2,7 +2,7 @@
 
 La idea de este proyecto es dar un pequeño repaso sobre conexiones a una API y sobre eventos. Es una pequeña aplicación web que muestra imágenes de perros aleatorias (obtenidas desde [dog.ceo](https://dog.ceo/dog-api/)) y permite marcarlas como "me gusta" o "no me gusta".
 
-Este repositorio es la **base de trabajo** para la Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101). A partir de este punto, cada pareja debe construir su propio flujo de trabajo colaborativo aplicando Git, GitHub y GitHub Actions.
+Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101).
 
 ---
 
@@ -17,23 +17,25 @@ npx serve .
 ---
 
 ## 🌳 Estrategia de ramificación
-
-> ✏️ **A completar por la pareja.**
-> Indiquen aquí si optaron por **GitFlow** o **Trunk-Based Development**, y justifiquen la elección considerando el tamaño del proyecto, la frecuencia de cambios esperada, y el tipo de equipo (2 personas).
+>Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
 
 ---
 
 ## 📝 Convenciones de commits
 
-> ✏️ **A completar por la pareja.**
 > Documenten aquí el formato que van a usar para sus mensajes de commit (ej. `feat: agrega contador de likes`, `fix: corrige error en carga de imagen`), y por qué eligieron ese formato.
 
 ---
 
 ## 🔀 Convenciones de naming de ramas
+Adoptamos el estándar de Conventional Commits con la siguiente estructura: <tipo>: <descripción corta en presente>.
 
-> ✏️ **A completar por la pareja.**
-> Ejemplo de formato a definir: `feature/<nombre-descriptivo>`, `hotfix/<nombre-descriptivo>`. Expliquen brevemente el criterio que usaron para nombrar sus ramas durante el desarrollo.
+Tipos utilizados
+feat: Nueva funcionalidad (ej. feat: agrega botones de me gusta y no me gusta).
+
+fix: Corrección de errores (ej. fix: corrige fallo al cargar la imagen inicial).
+
+docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README con instrucciones).
 
 ---
 
@@ -46,7 +48,6 @@ npx serve .
 
 ## ⚙️ Automatización (CI/CD)
 
-> ✏️ **A completar por la pareja.**
 > Este proyecto no incluye ningún workflow de GitHub Actions todavía — es parte de su trabajo diseñarlo e implementarlo.
 >
 > **Objetivo sugerido:** usar este repositorio como si tuviera un entorno de *staging* (rama `develop`) y uno de *producción* (rama `main`), automatizando la integración de cambios entre ambos. Por ejemplo:
@@ -54,6 +55,8 @@ npx serve .
 > - Al abrir un Pull Request hacia `main`: ejecutar una verificación o despliegue automático
 >
 > Documenten aquí qué automatizaron, por qué, y qué rol cumple dentro de un proceso CI/CD real.
+
+
 
 ---
 
@@ -74,7 +77,8 @@ Lista-de-perros/
 
 ## 👥 Autores
 
-- Integrante 1 — nombre
-- Integrante 2 — nombre
+- Integrante 1 — Valentina Cortez 
+- Integrante 2 — Joaquín Orellana
+- Integrante 3 - Bastián Sandoval
 
-*Proyecto original: repaso de conexión a API y manejo de eventos en JavaScript. Adaptado como base para la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
+*Repaso de conexión a API y manejo de eventos en JavaScript. Adaptado como base para la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
