@@ -44,7 +44,6 @@ docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README co
 
 ## 🔍 Estrategia de revisión (Pull Requests)
 
-> ✏️ **A completar por la pareja.**
 Los cambios realizados por los integrantes fueron revisados mediante Pull Requests antes de ser incorporados a la rama main.
 
 Para aprobar un Pull Request se consideraron los siguientes puntos:
@@ -130,9 +129,6 @@ Lista-de-perros/
 └── README.md
 ```
 
-> ✏️ **A completar por la pareja.**
-> Si agregan nuevas carpetas o archivos durante el desarrollo (ej. `.github/workflows/`), actualicen este diagrama.
-
 ---
 
 ## 👥 Autores
@@ -141,4 +137,4 @@ Lista-de-perros/
 - Integrante 2 — Joaquín Orellana
 - Integrante 3 - Bastián Sandoval
 
-*Repaso de conexión a API y manejo de eventos en JavaScript. Adaptado como base para la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
+*la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
