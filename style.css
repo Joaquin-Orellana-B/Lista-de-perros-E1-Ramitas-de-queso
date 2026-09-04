@@ -82,3 +82,24 @@ button:hover {
 .escondido {
   display: none;
 }
+.posicion-tabla {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.posicion-tabla table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.posicion-tabla th, 
+.posicion-tabla td {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+}

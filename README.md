@@ -2,7 +2,7 @@
 
 La idea de este proyecto es dar un pequeño repaso sobre conexiones a una API y sobre eventos. Es una pequeña aplicación web que muestra imágenes de perros aleatorias (obtenidas desde [dog.ceo](https://dog.ceo/dog-api/)) y permite marcarlas como "me gusta" o "no me gusta".
 
-Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101).
+Este repositorio es la **base de trabajo** para la Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101). A partir de este punto, cada pareja debe construir su propio flujo de trabajo colaborativo aplicando Git, GitHub y GitHub Actions.
 
 ---
 
@@ -13,109 +13,47 @@ No requiere instalación de dependencias. Basta con abrir `index.html` en el nav
 ```bash
 npx serve .
 ```
-Una vez iniciado el servidor, se debe acceder a la dirección indicada por la consola, normalmente:
 
-http://localhost:3000
 ---
 
 ## 🌳 Estrategia de ramificación
->Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
->Para organizar el trabajo se utilizaron ramas de corta duración asociadas a funcionalidades o correcciones específicas. Una vez terminados los cambios, estos se integraron a la rama principal mediante Pull Requests.
+
+> ✏️ **A completar por la pareja.**
+> Indiquen aquí si optaron por **GitFlow** o **Trunk-Based Development**, y justifiquen la elección considerando el tamaño del proyecto, la frecuencia de cambios esperada, y el tipo de equipo (2 personas).
 
 ---
 
 ## 📝 Convenciones de commits
 
-Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
+> ✏️ **A completar por la pareja.**
+> Documenten aquí el formato que van a usar para sus mensajes de commit (ej. `feat: agrega contador de likes`, `fix: corrige error en carga de imagen`), y por qué eligieron ese formato.
 
 ---
 
 ## 🔀 Convenciones de naming de ramas
-Adoptamos el estándar de Conventional Commits con la siguiente estructura: <tipo>: <descripción corta en presente>.
 
-Tipos utilizados
-feat: Nueva funcionalidad (ej. feat: agrega botones de me gusta y no me gusta).
-
-fix: Corrección de errores (ej. fix: corrige fallo al cargar la imagen inicial).
-
-docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README con instrucciones).
+> ✏️ **A completar por la pareja.**
+> Ejemplo de formato a definir: `feature/<nombre-descriptivo>`, `hotfix/<nombre-descriptivo>`. Expliquen brevemente el criterio que usaron para nombrar sus ramas durante el desarrollo.
 
 ---
 
 ## 🔍 Estrategia de revisión (Pull Requests)
 
-Los cambios realizados por los integrantes fueron revisados mediante Pull Requests antes de ser incorporados a la rama main.
+> ✏️ **A completar por la pareja.**
+> ¿Cómo revisaron los cambios antes de fusionarlos a `develop` o `main`? ¿Qué debía cumplir un Pull Request para ser aprobado?
 
-Para aprobar un Pull Request se consideraron los siguientes puntos:
-
-El código debía cumplir con la funcionalidad solicitada.
-La aplicación debía ejecutarse correctamente.
-Los cambios debían ser coherentes con la estructura existente del proyecto.
-Los commits debían seguir las convenciones establecidas.
-El proceso utilizado fue:
-
-Crear rama
-    ↓
-Realizar cambios
-    ↓
-Commit
-    ↓
-Push de la rama
-    ↓
-Crear Pull Request
-    ↓
-Revisión del código
-    ↓
-Correcciones (si eran necesarias)
-    ↓
-Aprobación
-    ↓
-Merge a main
-
-La revisión mediante Pull Requests permitió detectar errores antes de integrar los cambios y mantener una versión estable del proyecto.
 ---
 
 ## ⚙️ Automatización (CI/CD)
 
-Para este proyecto se implementó una automatización básica mediante GitHub Actions, con el objetivo de validar automáticamente los cambios antes de integrarlos a la rama principal.
-
-El flujo de trabajo considera:
-
-Ejecutar validaciones cuando se realiza un push.
-Ejecutar validaciones al crear o actualizar un Pull Request hacia main.
-Verificar que los archivos principales del proyecto estén presentes.
-Realizar comprobaciones básicas sobre HTML, CSS y JavaScript.
-Evitar que cambios con errores evidentes sean integrados a la versión estable.
-
-La automatización permite detectar problemas de forma temprana y reduce la necesidad de realizar todas las verificaciones manualmente.
-
-Flujo CI/CD
-Desarrollador
-     ↓
-Commit
-     ↓
-Push
-     ↓
-GitHub
-     ↓
-GitHub Actions
-     ↓
-Validaciones automáticas
-     ↓
-   ¿Correcto?
-    ↙      ↘
-  Sí        No
-  ↓          ↓
-Pull       Corregir
-Request     errores
-  ↓
-Revisión
-  ↓
-Merge
-  ↓
- main
-
-
+> ✏️ **A completar por la pareja.**
+> Este proyecto no incluye ningún workflow de GitHub Actions todavía — es parte de su trabajo diseñarlo e implementarlo.
+>
+> **Objetivo sugerido:** usar este repositorio como si tuviera un entorno de *staging* (rama `develop`) y uno de *producción* (rama `main`), automatizando la integración de cambios entre ambos. Por ejemplo:
+> - Al hacer `push` a `develop`: validar que el código no tenga errores evidentes (HTML/CSS/JS)
+> - Al abrir un Pull Request hacia `main`: ejecutar una verificación o despliegue automático
+>
+> Documenten aquí qué automatizaron, por qué, y qué rol cumple dentro de un proceso CI/CD real.
 
 ---
 
@@ -129,12 +67,14 @@ Lista-de-perros/
 └── README.md
 ```
 
+> ✏️ **A completar por la pareja.**
+> Si agregan nuevas carpetas o archivos durante el desarrollo (ej. `.github/workflows/`), actualicen este diagrama.
+
 ---
 
 ## 👥 Autores
 
-- Integrante 1 — Valentina Cortez 
-- Integrante 2 — Joaquín Orellana
-- Integrante 3 - Bastián Sandoval
+- Integrante 1 — nombre
+- Integrante 2 — nombre
 
-*la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
+*Proyecto original: repaso de conexión a API y manejo de eventos en JavaScript. Adaptado como base para la Evaluación Parcial N°1, DOY0101 — Ingeniería DevOps.*
