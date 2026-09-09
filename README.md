@@ -4,8 +4,6 @@ La idea de este proyecto es dar un pequeño repaso sobre conexiones a una API y 
 
 Este repositorio es la **base de trabajo** para la Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101). A partir de este punto, cada pareja debe construir su propio flujo de trabajo colaborativo aplicando Git, GitHub y GitHub Actions.
 
-
-
 ---
 
 ## 🚀 Cómo levantar el proyecto localmente
@@ -22,9 +20,6 @@ npx serve .
 
 > ✏️ **A completar por la pareja.**
 > Indiquen aquí si optaron por **GitFlow** o **Trunk-Based Development**, y justifiquen la elección considerando el tamaño del proyecto, la frecuencia de cambios esperada, y el tipo de equipo (2 personas).
-
-Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
-
 
 ---
 
