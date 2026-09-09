@@ -2,21 +2,46 @@ const perroActualElement = document.getElementById("perroActual");
 const spinner = document.getElementById("spinner");
 const perrosLikeContainer = document.getElementById("perrosLikeContainer");
 const perrosDislikeContainer = document.getElementById("perrosDislikeContainer");
+<<<<<<< HEAD
 const favoritosSelect = document.getElementById("favoritosSelect"); // <--- Nuevo elemento HTML
+=======
+
+// Referencias de la tabla
+const countLikeEl = document.getElementById("countLike");
+const countDislikeEl = document.getElementById("countDislike");
+const countSaltearEl = document.getElementById("countSaltear");
+
+// Variables de estado
+let perroActual;
+let likes = 0;
+let dislikes = 0;
+let salteados = 0;
+>>>>>>> origin/feature/cantidad_likes
 
 perrosLikeContainer.classList.toggle("escondido");
 perrosDislikeContainer.classList.toggle("escondido");
 
+<<<<<<< HEAD
 let perroActual;
 const conteoFavoritos = {}; // <--- Guardará { "beagle": 2, "boxer": 1 }
 
+=======
+>>>>>>> origin/feature/cantidad_likes
 document.getElementById("like").addEventListener("click", () => {
   rankearPerro("+");
 });
+
 document.getElementById("dislike").addEventListener("click", () => {
   rankearPerro("-");
 });
-document.getElementById("saltear").addEventListener("click", nuevoPerro);
+
+// Incrementa el contador al hacer clic en "saltear"
+document.getElementById("saltear").addEventListener("click", () => {
+  salteados++;
+  countSaltearEl.textContent = salteados;
+  nuevoPerro();
+});
+
 perroActualElement.addEventListener("load", () => {
   spinner.classList.toggle("escondido", true);
   perroActualElement.classList.toggle("escondido", false);
@@ -48,10 +73,17 @@ function actualizarDropdownFavoritos() {
 function rankearPerro(ranking) {
   const nuevaImagen = document.createElement("img");
   nuevaImagen.src = perroActual;
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/feature/cantidad_likes
   if (ranking === "+") {
+    likes++;
+    countLikeEl.textContent = likes;
     perrosLikeContainer.appendChild(nuevaImagen);
     perrosLikeContainer.classList.toggle("escondido", false);
+<<<<<<< HEAD
     
     // Extrae la raza e incrementa su contador
     const raza = obtenerRazaDeUrl(perroActual);
@@ -59,10 +91,15 @@ function rankearPerro(ranking) {
     
     // Actualiza la lista desplegable
     actualizarDropdownFavoritos();
+=======
+>>>>>>> origin/feature/cantidad_likes
   } else {
+    dislikes++;
+    countDislikeEl.textContent = dislikes;
     perrosDislikeContainer.appendChild(nuevaImagen);
     perrosDislikeContainer.classList.toggle("escondido", false);
   }
+
   nuevoPerro();
 }
 
@@ -71,6 +108,7 @@ async function nuevoPerro() {
   spinner.classList.toggle("escondido", false);
   const res = await fetch("https://dog.ceo/api/breeds/image/random");
   const jsonRes = await res.json();
+
   if (jsonRes.status === "success") {
     perroActual = jsonRes.message;
     perroActualElement.src = perroActual;
@@ -79,5 +117,9 @@ async function nuevoPerro() {
   }
 }
 
+<<<<<<< HEAD
 // Ejecución
+=======
+// Ejecución inicial
+>>>>>>> origin/feature/cantidad_likes
 nuevoPerro();
