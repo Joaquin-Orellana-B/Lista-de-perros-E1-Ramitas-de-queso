@@ -21,21 +21,13 @@ http://localhost:3000
 ---
 
 ## 🌳 Estrategia de ramificación
->Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
+>Se optó por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
 >Para organizar el trabajo se utilizaron ramas de corta duración asociadas a funcionalidades o correcciones específicas. Una vez terminados los cambios, estos se integraron a la rama principal mediante Pull Requests.
-
-Optamos por Trunk-based development ya que minimiza la divergencia de código entre ambos desarrolladores, reduciendo drásticamente el riesgo de merge conflicts complejos al sincronizar el trabajo diariamente.
-
 
 ---
 
 ## 📝 Convenciones de commits
 
-Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
-
----
-
-## 🔀 Convenciones de naming de ramas
 Adoptamos el estándar de Conventional Commits con la siguiente estructura: <tipo>: <descripción corta en presente>.
 
 Tipos utilizados
@@ -44,6 +36,14 @@ feat: Nueva funcionalidad (ej. feat: agrega botones de me gusta y no me gusta).
 fix: Corrección de errores (ej. fix: corrige fallo al cargar la imagen inicial).
 
 docs: Cambios exclusivamente en documentación (ej. docs: actualiza el README con instrucciones).
+
+Se decidió utilizar esta convención porque facilita comprender rápidamente qué cambio se realizó en cada commit y ayuda a mantener un historial de Git más organizado.
+
+---
+
+## 🔀 Convenciones de naming de ramas
+
+Siguiendo la estrategia de _Trunk-based development_, se optó por prescindir de una rama develop global de larga duración y del flujo complejo de ramas propio de Git Flow. En su lugar, la rama main actúa como el tronco central estable, complementada por ramas de corta duración asociadas a cada desarrollador e integración puntual, las cuales se unen a main de forma frecuente mediante Pull Requests.. 
 
 ---
 
@@ -134,8 +134,28 @@ Lista-de-perros/
 └── README.md
 ```
 
----
+## 📜 Historial de cambios (Changelog)
 
+### [1.0.0] - 2026-09-09
+#### 📝 Documentación y Ajustes (docs / fix)
+- **docs:** Actualiza el `README.md` incorporando la propuesta de estrategia de ramificación y el changelog para revisión del equipo.
+- **fix:** Integra la actualización de estilo para el color de fondo (`style.css`) desde la rama hotfix conservando la autoría original.
+- **fix:** Resuelve conflictos de integración entre la tabla de contadores y el desplegable de favoritos.
+
+### [0.3.0] - 2026-09-08
+#### ✨ Funcionalidades y Sincronización (feat / fix)
+- **feat:** Agrega menú desplegable de razas de perros favoritas.
+- **fix:** Restaura la tabla de estadísticas y sincroniza el recuento con el menú desplegable.
+
+### [0.2.0] - 2026-09-03
+#### ✨ Funcionalidades y Refactorización (feat / fix)
+- **feat:** Agrega tabla interactiva de contadores para likes, dislikes y salteados.
+- **fix:** Reestructura la arquitectura del proyecto moviendo los archivos a la raíz del repositorio.
+
+### [0.1.0] - 2026-09-01
+#### 🚀 Inicialización y Configuración (chore / docs)
+- Commit inicial con la estructura base del proyecto.
+- Crea y redacta la primera versión del `README.md` con la información del equipo y convenciones iniciales.
 ## 👥 Autores
 
 - Integrante 1 — Valentina Cortez 
