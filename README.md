@@ -8,7 +8,7 @@ Evaluación Parcial N°1 de Ingeniería DevOps (DOY0101).
 
 ---
 
-## 🚀 Cómo levantar el proyecto localmente
+## Cómo levantar el proyecto localmente
 
 No requiere instalación de dependencias. Basta con abrir `index.html` en el navegador, o servirlo con cualquier servidor estático simple, por ejemplo:
 
@@ -26,7 +26,7 @@ http://localhost:3000
 
 ---
 
-## 📝 Convenciones de commits
+##  Convenciones de commits
 
 Adoptamos el estándar de Conventional Commits con la siguiente estructura: <tipo>: <descripción corta en presente>.
 
@@ -41,13 +41,13 @@ Se decidió utilizar esta convención porque facilita comprender rápidamente qu
 
 ---
 
-## 🔀 Convenciones de naming de ramas
+## Convenciones de naming de ramas
 
 Siguiendo la estrategia de _Trunk-based development_, se optó por prescindir de una rama develop global de larga duración y del flujo complejo de ramas propio de Git Flow. En su lugar, la rama main actúa como el tronco central estable, complementada por ramas de corta duración asociadas a cada desarrollador e integración puntual, las cuales se unen a main de forma frecuente mediante Pull Requests.. 
 
 ---
 
-## 🔍 Estrategia de revisión (Pull Requests)
+##  Estrategia de revisión (Pull Requests)
 
 Los cambios realizados por los integrantes fueron revisados mediante Pull Requests antes de ser incorporados a la rama main.
 
@@ -80,7 +80,7 @@ Merge a main
 La revisión mediante Pull Requests permitió detectar errores antes de integrar los cambios y mantener una versión estable del proyecto.
 ---
 
-## ⚙️ Automatización (CI/CD)
+## Automatización (CI/CD)
 
 Para este proyecto se implementó una automatización básica mediante GitHub Actions, con el objetivo de validar automáticamente los cambios antes de integrarlos a la rama principal.
 
@@ -94,31 +94,33 @@ Evitar que cambios con errores evidentes sean integrados a la versión estable.
 
 La automatización permite detectar problemas de forma temprana y reduce la necesidad de realizar todas las verificaciones manualmente.
 
-Flujo CI/CD
-Desarrollador
-     ↓
-Commit
-     ↓
-Push
-     ↓
-GitHub
-     ↓
-GitHub Actions
-     ↓
-Validaciones automáticas
-     ↓
-   ¿Correcto?
-    ↙      ↘
-  Sí        No
-  ↓          ↓
-Pull       Corregir
-Request     errores
-  ↓
-Revisión
-  ↓
-Merge
-  ↓
- main
+```
+              Flujo CI/CD
+                   ↓
+             Desarrollador
+                   ↓
+                Commit
+                   ↓
+                 Push
+                   ↓
+                GitHub
+                   ↓
+            GitHub Actions
+                   ↓
+       Validaciones automáticas
+                   ↓
+              ¿Correcto?
+              ↙        ↘
+            Sí          No
+            ↓            ↓
+       Pull Request   Corregir errores
+            ↓
+         Revisión
+            ↓
+          Merge
+            ↓
+           main
+```
 
 
 
@@ -134,28 +136,29 @@ Lista-de-perros/
 └── README.md
 ```
 
-## 📜 Historial de cambios (Changelog)
+## Historial de cambios (Changelog)
 
 ### [1.0.0] - 2026-09-09
-#### 📝 Documentación y Ajustes (docs / fix)
+#### Documentación y Ajustes (docs / fix)
 - **docs:** Actualiza el `README.md` incorporando la propuesta de estrategia de ramificación y el changelog para revisión del equipo.
 - **fix:** Integra la actualización de estilo para el color de fondo (`style.css`) desde la rama hotfix conservando la autoría original.
 - **fix:** Resuelve conflictos de integración entre la tabla de contadores y el desplegable de favoritos.
 
 ### [0.3.0] - 2026-09-08
-#### ✨ Funcionalidades y Sincronización (feat / fix)
+#### Funcionalidades y Sincronización (feat / fix)
 - **feat:** Agrega menú desplegable de razas de perros favoritas.
 - **fix:** Restaura la tabla de estadísticas y sincroniza el recuento con el menú desplegable.
 
 ### [0.2.0] - 2026-09-03
-#### ✨ Funcionalidades y Refactorización (feat / fix)
+#### Funcionalidades y Refactorización (feat / fix)
 - **feat:** Agrega tabla interactiva de contadores para likes, dislikes y salteados.
 - **fix:** Reestructura la arquitectura del proyecto moviendo los archivos a la raíz del repositorio.
 
 ### [0.1.0] - 2026-09-01
-#### 🚀 Inicialización y Configuración (chore / docs)
+####  Inicialización y Configuración (chore / docs)
 - Commit inicial con la estructura base del proyecto.
 - Crea y redacta la primera versión del `README.md` con la información del equipo y convenciones iniciales.
+
 ## 👥 Autores
 
 - Integrante 1 — Valentina Cortez 
