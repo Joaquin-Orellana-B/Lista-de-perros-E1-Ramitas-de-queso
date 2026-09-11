@@ -8,11 +8,15 @@ const countLikeEl = document.getElementById("countLike");
 const countDislikeEl = document.getElementById("countDislike");
 const countSaltearEl = document.getElementById("countSaltear");
 
+// Referencia del menú desplegable de Razas Favoritas
+const favoritosSelect = document.getElementById("favoritosSelect");
+
 // Variables de estado
 let perroActual;
 let likes = 0;
 let dislikes = 0;
 let salteados = 0;
+const conteoFavoritos = {};
 
 perrosLikeContainer.classList.toggle("escondido");
 perrosDislikeContainer.classList.toggle("escondido");
@@ -46,6 +50,11 @@ function rankearPerro(ranking) {
     countLikeEl.textContent = likes;
     perrosLikeContainer.appendChild(nuevaImagen);
     perrosLikeContainer.classList.toggle("escondido", false);
+
+    // Extrae la raza desde la URL de Dog CEO API y actualiza el conteo
+    const raza = perroActual.split("/")[4];
+    conteoFavoritos[raza] = (conteoFavoritos[raza] || 0) + 1;
+    actualizarDropdownFavoritos();
   } else {
     dislikes++;
     countDislikeEl.textContent = dislikes;
@@ -54,6 +63,18 @@ function rankearPerro(ranking) {
   }
 
   nuevoPerro();
+}
+
+// Función para regenerar las opciones del menú desplegable
+function actualizarDropdownFavoritos() {
+  favoritosSelect.innerHTML = '<option value="">-- Razas Favoritas --</option>';
+
+  for (const [raza, cantidad] of Object.entries(conteoFavoritos)) {
+    const opcion = document.createElement("option");
+    opcion.value = raza;
+    opcion.textContent = `${raza.toUpperCase()} (${cantidad})`;
+    favoritosSelect.appendChild(opcion);
+  }
 }
 
 async function nuevoPerro() {

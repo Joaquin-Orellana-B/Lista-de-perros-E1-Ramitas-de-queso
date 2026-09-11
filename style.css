@@ -2,11 +2,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #eff9ff;
+  background-color: #d2e70e34
 }
 
-h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #fotoPrincipalContainer,
@@ -33,28 +33,28 @@ h1{
   }
 }
 
-#botonesContainer{
-    display: flex;
+#botonesContainer {
+  display: flex;
 }
 
 button {
-    font-size: xx-large;
-    background-color: unset;
-    padding: 1rem;
-    margin: 10px 20px;
-    transition: 100ms ease-in-out;
+  font-size: xx-large;
+  background-color: unset;
+  padding: 1rem;
+  margin: 10px 20px;
+  transition: 100ms ease-in-out;
 }
 
 button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #like:hover {
-    background-color: #00ff2a23;
+  background-color: #00ff2a23;
 }
 
 #dislike:hover {
-    background-color: #79000023;
+  background-color: #79000023;
 }
 
 .perrosContainer {
@@ -82,6 +82,8 @@ button:hover {
 .escondido {
   display: none;
 }
+
+/* Tabla de Estadísticas (Arriba Izquierda) */
 .posicion-tabla {
   position: fixed;
   top: 10px;
@@ -102,4 +104,27 @@ button:hover {
 .posicion-tabla td {
   padding: 4px 8px;
   border: 1px solid #ccc;
+}
+
+/* Menú Desplegable de Favoritos (Arriba Derecha) */
+#favoritosSelect {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+}
+
+#favoritosSelect:hover {
+  border-color: #3498db;
+  background-color: #ffffff;
 }
